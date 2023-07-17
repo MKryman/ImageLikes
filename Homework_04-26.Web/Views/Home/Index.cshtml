@@ -1,0 +1,23 @@
+﻿@using Homework_04_26.Data
+@model HomePageViewModel
+
+<div b-gx69rlccnc class="container">
+    <main b-gx69rlccnc role="main" class="pb-3">
+
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                @foreach (Image img in Model.Images)
+                {
+                    <div class="bg-light p-4 rounded shadow mb-3" style="margin-bottom: 20px; text-align: center;">
+                        <a href="/home/viewimage?id=@img.Id">
+                            <h3>@img.Title</h3>
+                            <h5>Uploaded at: @img.DateUploaded</h5>
+                            <img style="width: 400px; align-content: center;" src="/Uploads/@img.FileName" />
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </main>
+</div>
